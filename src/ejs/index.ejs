@@ -1,0 +1,20 @@
+<% var title="河北ポートフォリオ3" ; var description="トップのdescription" ; %>
+
+<% var linkArray=[ {'link':'#about','name':'ABOUT',},
+{'link':'#skill','name':'SKILL',}, {'link':'#works','name':'WORKS',},
+{'link':'#contact','name':'CONTACT',}, ];%>
+
+<% var snsArray=[
+{'link':'https://www.youtube.com/','name':'youtube',},
+{'link':'https://www.instagram.com/','name':'instagram',},
+{'link':'https://www.facebook.com/','name':'facebook-f',},
+{'link':'https://twitter.com/','name':'twitter',}, ];%>
+
+<% include src/ejs/template/_head %>
+<% include src/ejs/template/_header %>
+<%include src/ejs/template/_modal %>
+<% include src/ejs/template/_about %>
+<%include src/ejs/template/_skill %>
+<% include src/ejs/template/_works %>
+<% include src/ejs/template/_contact %>
+<% include src/ejs/template/_footer %>
