@@ -35,22 +35,21 @@ module.exports = (env, argv) => {
         template: 'src/ejs/index.ejs',
       }),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: 'about/about.html',
         template: 'src/ejs/about/index.ejs',
       }),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: 'skill.html',
         template: 'src/ejs/skill/index.ejs',
       }),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: 'works.html',
         template: 'src/ejs/works/index.ejs',
       }),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: 'contact.html',
         template: 'src/ejs/contact/index.ejs',
       }),
-      
       // php
       new CopyWebpackPlugin(
         PRODUCTION
