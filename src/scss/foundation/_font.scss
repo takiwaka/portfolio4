@@ -3,16 +3,65 @@
   font-weight: thin;
   src: url("../../assets/fonts/NotoSansJP-Thin.otf");
 }
+
 @font-face {
-  font-family: 'Noto Sans JP';
+  font-family: 'NotoSansJP-Regular';
   font-style: normal;
   font-weight: 400;
   src:url("../../assets/fonts/NotoSansJP-Regular.otf");
 }
+
 @font-face {
-  font-family: 'CastroScript_PERSONAL_USE_ONLY';
-  src:url("../../assets/fonts/CastroScript_PERSONAL_USE_ONLY.ttf");
+  font-family: 'NotoSansJP-Light';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/NotoSansJP-Light.otf");
 }
+
+@font-face {
+  font-family: 'NotoSansJP-Medium';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/NotoSansJP-Medium.otf");
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/NotoSansJP-Light.otf");
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Black';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/NotoSansJP-Black.otf");
+}
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/BebasNeue-Regular.otf");
+}
+
+@font-face {
+  font-family: 'din1451alt';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/din1451alt.ttf");
+}
+
+@font-face {
+  font-family: 'din1451alt G';
+  font-style: normal;
+  font-weight: 400;
+  src:url("../../assets/fonts/din1451alt G.ttf");
+}
+
+
+
 
 body {
   font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN,
@@ -22,4 +71,6 @@ body {
     "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif; // 游明朝系
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
     "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; // 游ゴシック系
+
+    font-family: 'NotoSansJP-Regular';
 }
