@@ -2,7 +2,7 @@
 
 # portfolio4
 
-ポートフォリオ用のLP制作
+ポートフォリオ制作
 
 https://takiwaka.github.io/portfolio4/public/index.html
 
