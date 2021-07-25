@@ -1,0 +1,22 @@
+.p-menu {
+  @include mq(o-sp) {
+    display: flex;
+  }
+  @include mq(u-sp) {
+  }
+
+  &__list {
+
+  }
+  &__item{
+    &:nth-child(odd) {
+      background-color: $colorGray;
+    }
+    @include mq(o-sp) {
+width: 100vw;
+      height: 50vh;
+    }
+    @include mq(u-sp) {
+    }
+  }
+}

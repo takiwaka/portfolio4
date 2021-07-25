@@ -1,11 +1,25 @@
 .p-hero {
   @include mq(o-sp) {
+    display: flex;
   }
   @include mq(u-sp) {
   }
 
   &__yellow {
     @include mq(o-sp) {
+      width: 50vw;
+      height: 100vh;
+    }
+    @include mq(u-sp) {
+      height: 50vh;
+    }
+  }
+
+  &__gray {
+    background-color: $colorGray;
+    @include mq(o-sp) {
+      width: 50vw;
+      height: 100vh;
     }
     @include mq(u-sp) {
       height: 50vh;
@@ -13,25 +27,16 @@
   }
 
   &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'din1451alt G';
+    font-size: 4rem;
     @include mq(o-sp) {
     }
     @include mq(u-sp) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-
-    }
-  }
-
-  &__gray {
-    background-color: $colorGray;
-
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-      height: 50vh;
     }
   }
 }
