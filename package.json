@@ -42,6 +42,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "jquery": "^3.6.0",
+    "jquery-scrollify": "^1.0.21",
     "slick-carousel": "^1.8.1"
   },
   "browserslist": [
