@@ -6,6 +6,7 @@
   }
 
   &__yellow {
+    background-color: $colorMain;
     @include mq(o-sp) {
       width: 50vw;
       height: 100vh;

@@ -1,5 +1,6 @@
 .l-footer {
-  height: 100px;
+  height: 50vh;
+  background-color: #000;
   @include mq(o-sp) {
   }
   @include mq(u-sp) {
