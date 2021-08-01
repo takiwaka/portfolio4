@@ -1,13 +1,11 @@
 import $ from "jquery";
 
 $(function () {
-    $(".jsc-load-wrap").css("display", "none");
-    $("#loader-bg ,#loader").addClass("is-active");
 
   $(window).on("load",function () {
-    $("#loader-bg").delay(600).fadeOut(300);
-    $("#loader").delay(600).fadeOut(300);
-    $("jsc-load-wrap").css("display", "block");
+    $("#loader-bg").addClass("is-active");
+    $("#loader").addClass("is-active");
+    $(".jsc-load-wrap").addClass("is-active");
   });
 
   //10秒たったら強制的にロード画面を非表示

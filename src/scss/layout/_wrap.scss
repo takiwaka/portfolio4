@@ -1,5 +1,9 @@
 .l-wrap {
-margin: 0 auto;
-color: $colorBlack;
-background-color: $colorMain;
+  display: none;
+  margin: 0 auto;
+  color: $colorBlack;
+  background-color: $colorMain;
+  &.is-active {
+    display: block;
+  }
 }

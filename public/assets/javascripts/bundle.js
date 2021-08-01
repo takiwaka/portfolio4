@@ -11946,12 +11946,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".jsc-load-wrap").css("display", "none");
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loader-bg ,#loader").addClass("is-active");
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("load", function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loader-bg").delay(600).fadeOut(300);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loader").delay(600).fadeOut(300);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("jsc-load-wrap").css("display", "block");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loader-bg").addClass("is-active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loader").addClass("is-active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".jsc-load-wrap").addClass("is-active");
   }); //10秒たったら強制的にロード画面を非表示
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
