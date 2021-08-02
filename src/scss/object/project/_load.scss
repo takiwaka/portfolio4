@@ -1,4 +1,4 @@
-#loader-bg {
+.p-load {
   display: block;
   position: fixed;
   width: 100%;
@@ -7,23 +7,20 @@
   left: 0px;
   background: #000;
   z-index: 1;
-  transition: all 2s ease-out;
+  transition: all .5s ;
   &.is-active {
-
     opacity: 0;
   }
 }
-#loader {
+
+.p-load__content {
   display: block;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
-  margin-top: -100px;
-  margin-left: -100px;
-  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
   color: #fff;
   z-index: 2;
-
 }

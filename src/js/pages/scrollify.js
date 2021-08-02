@@ -5,8 +5,9 @@ $(function () {
   var current;
 
   $.scrollify({
-    section: ".jsc-scrollify",
+    section: ".scrollify",
     setHeights: false,
+    updateHash:false,
     before: function (i, box) {
       current = i;
     },
