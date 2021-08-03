@@ -14,7 +14,7 @@ $(function () {
     scrollSpeed: 600,
     scrollbars: true,
     before:function(index, section) {
-      pagerCurrent(index); // ページャーに対応する順番にクラス名を付与
+      pagerCurrent(index);
     },
     afterRender:function() {
       createPager(); // ページャーの作成
