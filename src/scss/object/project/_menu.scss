@@ -1,12 +1,10 @@
 .p-menu {
   @include mq(o-sp) {
-    display: flex;
+    position: relative;
   }
   @include mq(u-sp) {
   }
 
-  &__list {
-  }
   &__item {
     &:nth-child(odd) {
       background-color: $colorGray;
