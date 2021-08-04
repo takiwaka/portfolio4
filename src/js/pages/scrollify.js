@@ -9,7 +9,6 @@ $(function () {
   $.scrollify({
     section: ".scrollify",
     setHeights: false,
-    updateHash:false,
     easing: "swing",
     scrollSpeed: 600,
     scrollbars: true,

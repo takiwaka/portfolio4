@@ -11996,12 +11996,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var current;
   var $section = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scrollify'); // 各スライド
 
-  var $pager = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-pager'); // ページャー枠
+  var $pager = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.jsc-pager'); // ページャー枠
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default.a.scrollify({
     section: ".scrollify",
     setHeights: false,
-    updateHash: false,
     easing: "swing",
     scrollSpeed: 600,
     scrollbars: true,
