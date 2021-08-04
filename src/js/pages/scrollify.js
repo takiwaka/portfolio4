@@ -4,7 +4,7 @@ import "jquery-scrollify";
 $(function () {
   var current;
   var $section = $('.scrollify'); // 各スライド
-  var $pager = $('#js-pager'); // ページャー枠
+  var $pager = $('.jsc-pager'); // ページャー枠
 
   $.scrollify({
     section: ".scrollify",
@@ -55,10 +55,6 @@ function pagerLink () {
   $pager.find('a').on('click', function() {
     $.scrollify.move($(this).attr("href"));
   });
-}
-
-
-
-
+ }
 });
 
