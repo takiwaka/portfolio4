@@ -1,8 +1,10 @@
 .p-hero {
+  position: relative;
   @include mq(o-sp) {
     display: flex;
   }
   @include mq(u-sp) {
+    height: 100vh;
   }
 
   &__yellow {
@@ -39,5 +41,13 @@
     }
     @include mq(u-sp) {
     }
+  }
+
+  &__scroll{
+    position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
   }
 }

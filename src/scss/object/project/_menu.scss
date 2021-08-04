@@ -5,16 +5,27 @@
   }
 
   &__item {
-    &:nth-child(odd) {
-      background-color: $colorGray;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include mq(o-sp) {
       width: 100%;
       height: 100vh;
     }
     @include mq(u-sp) {
       width: 100%;
-      height: 50vh;
+      height: 100vh;
     }
+    &:nth-child(even) {
+      background-color: $colorGray;
+    }
+  }
+
+  &__about{
+    width: 100%;
+    height: 50%;
+    margin: 0 30px;
+    
+    background-color: $colorBlack;
   }
 }
