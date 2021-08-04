@@ -10,11 +10,11 @@
       background-color: $colorGray;
     }
     @include mq(o-sp) {
-      width: 100vw;
+
       height: 100vh;
     }
     @include mq(u-sp) {
-            width: 100vw;
+
       height: 50vh;
     }
   }
