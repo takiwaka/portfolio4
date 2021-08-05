@@ -46,10 +46,6 @@ module.exports = (env, argv) => {
         filename: 'works.html',
         template: 'src/ejs/works/index.ejs',
       }),
-      new HtmlWebpackPlugin({
-        filename: 'contact.html',
-        template: 'src/ejs/contact/index.ejs',
-      }),
       // php
       new CopyWebpackPlugin(
         PRODUCTION
