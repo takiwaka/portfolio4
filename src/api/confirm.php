@@ -3,7 +3,7 @@ session_start();
 
 // 入力画面からのアクセスでなければ、戻す
 if (!isset($_SESSION['form'])) {
-    header('Location: index.php');
+    header('Location: contact.php');
     exit();
 } else {
     $post = $_SESSION['form'];
@@ -11,7 +11,7 @@ if (!isset($_SESSION['form'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // メールを送信する
-    $to = 'me@example.com';
+    $to = 'postmaster@takiwaka.sakura.ne.jp';
     $from = $post['email'];
     $subject = 'お問い合わせが届きました';
     $body = <<<EOT
