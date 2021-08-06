@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
     entry: './src/js/index.js',
     output: {
       filename: PRODUCTION
-        ? 'assets/javascripts/bundle[hash].js'
+        ? 'assets/javascripts/bundle.js'
         : 'assets/javascripts/bundle.js',
       path: path.join(__dirname, 'public'),
     },
@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
       ]),
       new MiniCssExtractPlugin({
         filename: PRODUCTION
-          ? 'assets/stylesheets/bundle[hash].css'
+          ? 'assets/stylesheets/bundle.css'
           : 'assets/stylesheets/bundle.css',
       }),
 
@@ -48,15 +48,13 @@ module.exports = (env, argv) => {
       }),
       // php
       new CopyWebpackPlugin(
-        PRODUCTION
-          ? [
+           [
               {
                 from: './src/api/*.php',
                 to: path.resolve(__dirname, 'public/api'),
                 flatten: true,
               },
             ]
-          : []
       ),
     ],
     resolve: {
