@@ -1,68 +1,74 @@
-const webpack = require('webpack')
-const path = require('path')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const globImporter = require('node-sass-glob-importer')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require("webpack");
+const path = require("path");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const globImporter = require("node-sass-glob-importer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var ExtractHashWebpackPlugin = require('extract-hash-webpack-plugin').default;
+const DIST_PATH = "public/api";
 
 module.exports = (env, argv) => {
-  const PRODUCTION = argv.mode === 'production'
+  const PRODUCTION = argv.mode === "production";
 
   return {
-    entry: './src/js/index.js',
+    entry: "./src/js/index.js",
     output: {
       filename: PRODUCTION
-        ? 'assets/javascripts/bundle.js'
-        : 'assets/javascripts/bundle.js',
-      path: path.join(__dirname, 'public'),
+        ? "assets/javascripts/bundle.[hash].js"
+        : "assets/javascripts/bundle.js",
+      path: path.join(__dirname, "public"),
     },
     plugins: [
       new CleanWebpackPlugin([
-        'public/assets/stylesheets',
-        'public/assets/javascripts',
+        "public/assets/stylesheets",
+        "public/assets/javascripts",
       ]),
       new MiniCssExtractPlugin({
         filename: PRODUCTION
-          ? 'assets/stylesheets/bundle.css'
-          : 'assets/stylesheets/bundle.css',
+          ? "assets/stylesheets/bundle.[hash].css"
+          : "assets/stylesheets/bundle.css",
       }),
+
+      new ExtractHashWebpackPlugin({
+        dest: DIST_PATH,
+        filename: 'version.php',
+        fn: hash => `<? $HASH = '${hash}'; ?>`
+    }),
 
       // ejs
       new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: 'src/ejs/index.ejs',
+        filename: "index.html",
+        template: "src/ejs/index.ejs",
       }),
       new HtmlWebpackPlugin({
-        filename: 'about/about.html',
-        template: 'src/ejs/about/index.ejs',
+        filename: "about/about.html",
+        template: "src/ejs/about/index.ejs",
       }),
       new HtmlWebpackPlugin({
-        filename: 'skill.html',
-        template: 'src/ejs/skill/index.ejs',
+        filename: "skill.html",
+        template: "src/ejs/skill/index.ejs",
       }),
       new HtmlWebpackPlugin({
-        filename: 'works.html',
-        template: 'src/ejs/works/index.ejs',
+        filename: "works.html",
+        template: "src/ejs/works/index.ejs",
       }),
       // php
-      new CopyWebpackPlugin(
-           [
-              {
-                from: './src/api/*.php',
-                to: path.resolve(__dirname, 'public/api'),
-                flatten: true,
-              },
-            ]
-      ),
+      new CopyWebpackPlugin([
+        {
+          from: "./src/api/*.php",
+          to: path.resolve(__dirname, "public/api"),
+          flatten: true,
+        },
+      ]),
     ],
     resolve: {
       extensions: [
-        '.js', // for style-loader
+        ".js", // for style-loader
       ],
     },
-    devtool: PRODUCTION ? 'none' : 'source-map',
+    devtool: PRODUCTION ? "none" : "source-map",
     optimization: {
       minimizer: PRODUCTION
         ? [
@@ -83,45 +89,48 @@ module.exports = (env, argv) => {
           test: /node_modules\/(.+)\.css$/,
           use: [
             {
-              loader: 'style-loader',
+              loader: "style-loader",
             },
             {
-              loader: 'css-loader',
+              loader: "css-loader",
               options: { url: false },
             },
           ],
         },
         {
           test: /\.ejs$/,
-          use: 'ejs-compiled-loader',
+          use: "ejs-compiled-loader",
         },
         {
           test: /\.scss$/,
           use: [
             MiniCssExtractPlugin.loader, // javascriptとしてバンドルせず css として出力する
             {
-              loader: 'css-loader',
+              loader: "css-loader",
               options: {
-                url: false,// sassで相対パスを書けるようにする
+                url: false, // sassで相対パスを書けるようにする
                 sourceMap: true,
               },
             },
             {
-              loader: 'postcss-loader',
+              loader: "postcss-loader",
               options: {
                 sourceMap: true,
                 plugins: [
-                  require('cssnano')({
-                    preset: ['default', {minifyFontValues: {removeQuotes: false}}],
+                  require("cssnano")({
+                    preset: [
+                      "default",
+                      { minifyFontValues: { removeQuotes: false } },
+                    ],
                   }),
-                  require('autoprefixer')({
-                    grid: true
+                  require("autoprefixer")({
+                    grid: true,
                   }),
                 ],
               },
             },
             {
-              loader: 'sass-loader',
+              loader: "sass-loader",
               options: {
                 importer: globImporter(),
                 sourceMap: true,
@@ -134,25 +143,25 @@ module.exports = (env, argv) => {
           exclude: /node_modules/,
           use: [
             {
-              loader: 'babel-loader',
+              loader: "babel-loader",
               options: {
-                presets: [['@babel/preset-env', { modules: false }]],
+                presets: [["@babel/preset-env", { modules: false }]],
               },
             },
           ],
         },
         {
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
         },
       ],
     },
     devServer: {
-      contentBase: path.resolve(__dirname, 'public'),
+      contentBase: path.resolve(__dirname, "public"),
       port: 8082,
-      open:true,
+      open: true,
     },
-  }
-}
+  };
+};
