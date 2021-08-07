@@ -4,7 +4,6 @@
 
 ポートフォリオ制作
 
-https://takiwaka.github.io/portfolio4/public/index.html
-
+https://takiwaka.sakura.ne.jp
 
 ポート 8082<br>
