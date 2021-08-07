@@ -1,12 +1,123 @@
 <?php
-        header("Content-Type: text/html; charset=UTF-8");
-        // 結果は必ずUTF-8で返すこと
-        // $answer = mb_convert_encoding($answer,"UTF-8","auto");
-        //JSON形式にすることで複数の値を返すことも可能
-        // $json = new Services_JSON;
-        // $encode = $json->encode($arr); //JSONに変換
-        // echo $json->encode(['hoge' => 'ok']);   //JSONを出力
-        // header('Content-Type: application/json');
-        // echo json_encode(['data' => 'ok']);
-        // echo json_encode(['data' => 'ok']);
+header("Content-Type: text/html; charset=UTF-8");
+session_start();
+include('version.php');
+$error = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+        // フォームの送信時にエラーをチェックする
+        if ($post['name'] === '') {
+                $error['name'] = 'blank';
+        }
+        if ($post['email'] === '') {
+                $error['email'] = 'blank';
+        } else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+                $error['email'] = 'email';
+        }
+        if ($post['contact'] === '') {
+                $error['contact'] = 'blank';
+        }
+
+        if (count($error) === 0) {
+                // エラーがないので確認画面に移動
+                $_SESSION['form'] = $post;
+                header('Location: confirm.php');
+                exit();
+        }
+} else {
+        if (isset($_SESSION['form'])) {
+                $post = $_SESSION['form'];
+        }
+}
 ?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+        <meta charset="UTF-8">
+        <title>お問合せ</title>
+        <link rel="stylesheet" type="text/css" href="/public/assets/stylesheets/bundle.<?php echo $HASH ?>.css">
+</head>
+
+<body>
+        <div class="l-wrap">
+
+                <?php include('header.php') ?>
+
+                <div class="p-contact">
+
+                        <form action="" method="POST" novalidate>
+
+                                <p class="p-contact__heading">お問い合わせ</p>
+
+                                <div class="p-contact__row">
+                                        <div class="p-contact__title">
+                                                <label for="inputName">お名前</label>
+                                        </div>
+
+                                        <div class="p-contact__require">
+                                                <p class="p-contact__requireItem">必須</p>
+                                        </div>
+
+                                        <div class="p-contact__input">
+                                                <input type="text" name="name" class="p-contact__inputItem p-contact__inputName" value="<?php echo htmlspecialchars($post['name']); ?>" required autofocus>
+                                                <?php if ($error['name'] === 'blank') : ?>
+                                                        <p class="error_msg">※お名前をご記入下さい</p>
+                                                <?php endif; ?>
+                                        </div>
+                                </div>
+
+                                <div class="p-contact__row">
+                                        <div class="p-contact__title">
+                                                <label for="inputEmail">メールアドレス</label>
+                                        </div>
+
+                                        <div class="p-contact__require">
+                                                <p class="p-contact__requireItem">必須</p>
+                                        </div>
+
+                                        <div class="p-contact__input">
+                                                <input type="email" name="email" class="p-contact__inputItem p-contact__inputEmail" value="<?php echo htmlspecialchars($post['email']); ?>" required>
+
+                                                <?php if ($error['email'] === 'blank') : ?>
+                                                        <p class="error_msg">※メールアドレスをご記入下さい</p>
+                                                <?php endif; ?>
+
+                                                <?php if ($error['email'] === 'email') : ?>
+                                                        <p class="error_msg">※メールアドレスを正しくご記入ください</p>
+                                                <?php endif; ?>
+                                        </div>
+                                </div>
+
+                                <div class="p-contact__row">
+
+                                        <div class="p-contact__title">
+                                                <label for="inputContent">お問い合わせ内容</label>
+                                        </div>
+
+                                        <div class="p-contact__require">
+                                                <p class="p-contact__requireItem">必須</p>
+                                        </div>
+
+                                        <div class="p-contact__input">
+                                                <textarea name="contact" rows="10" class="p-contact__inputItem p-contact__inputContent" required><?php echo htmlspecialchars($post['contact']); ?></textarea>
+
+                                                <?php if ($error['contact'] === 'blank') : ?>
+                                                        <p class="error_msg">※お問い合わせ内容をご記入下さい</p>
+                                                <?php endif; ?>
+                                        </div>
+                                </div>
+
+                                <div class="p-contact__row">
+                                        <div class="p-contact__button">
+                                                <button type="submit">確認画面へ</button>
+                                        </div>
+                                </div>
+                        </form>
+                </div>
+        </div>
+</body>
+
+</html>

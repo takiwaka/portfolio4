@@ -1,9 +1,11 @@
 <?php
+header("Content-Type: text/html; charset=UTF-8");
+include('version.php');
 session_start();
 
 // 入力画面からのアクセスでなければ、戻す
 if (!isset($_SESSION['form'])) {
-    header('Location: index.php');
+    header('Location: contact.php');
     exit();
 } else {
     $post = $_SESSION['form'];
@@ -11,7 +13,7 @@ if (!isset($_SESSION['form'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // メールを送信する
-    $to = 'me@example.com';
+    $to = 'main@takiwaka.sakura.ne.jp';
     $from = $post['email'];
     $subject = 'お問い合わせが届きました';
     $body = <<<EOT
@@ -26,7 +28,7 @@ EOT;
 
     // セッションを消してお礼画面へ
     unset($_SESSION['form']);
-    header('Location: thanks.html');
+    header('Location: thanks.php');
     exit();
 }
 ?>
@@ -35,7 +37,6 @@ EOT;
 <head>
     <meta charset="UTF-8">
     <title>お問合せフォーム</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="contact.css">
 </head>
 <body>
