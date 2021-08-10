@@ -13,7 +13,7 @@ if (!isset($_SESSION['form'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // メールを送信する
-    $to = 'main@takiwaka.sakura.ne.jp';
+    $to = 'hakusou.kokuyou@gmail.com';
     $from = $post['email'];
     $subject = 'お問い合わせが届きました';
     $body = <<<EOT
