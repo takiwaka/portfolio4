@@ -7,7 +7,7 @@ $error = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-        // フォームの送信時にエラーをチェックする
+        // フォームの送信時にエラーをチェック
         if ($post['name'] === '') {
                 $error['name'] = 'blank';
         }

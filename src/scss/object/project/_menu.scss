@@ -22,10 +22,15 @@
   }
 
   &__about{
-    width: 100%;
-    height: 50%;
-    margin: 0 30px;
-    
-    background-color: $colorBlack;
+    width: 50vw;
+    height: 50vw;
+    max-width: 100vh;
+    max-height: 100vh;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $colorGray;
+    background-image: url("#{$bgPath}image-menu-01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
