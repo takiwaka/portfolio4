@@ -21,7 +21,7 @@
     }
   }
 
-  &__about{
+  &__about {
     width: 50vw;
     height: 50vw;
     max-width: 100vh;
@@ -33,4 +33,15 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  &__worksBox {
+    width: 50vw;
+    height: 50vw;
+    border-bottom: solid 30px $colorBlack;
+  }
+
+  &__worksTitle{
+    font-size: 2em;
+  }
+
 }
