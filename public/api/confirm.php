@@ -22,9 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 内容：
 {$post['contact']}
 EOT;
-    // var_dump($body);
-    // exit();
-    //mb_send_mail($to, $subject, $body, "From: {$from}");
+    mb_send_mail($to, $subject, $body, "From: {$from}");
 
     // セッションを消してお礼画面へ
     unset($_SESSION['form']);
