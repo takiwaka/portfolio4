@@ -24,8 +24,8 @@
   &__about {
     width: 50vw;
     height: 50vw;
-    max-width: 100vh;
-    max-height: 100vh;
+    max-width: 80vh;
+    max-height: 80vh;
     margin: 0 auto;
     border-radius: 50%;
     background-color: $colorGray;
@@ -35,9 +35,20 @@
   }
 
   &__worksBox {
-    width: 50vw;
-    height: 50vw;
-    border-bottom: solid 30px $colorBlack;
+    width: 100%;
+    height: 50vh;
+  }
+
+  &__worksList{
+width: 100%;
+height: 100%;
+  }
+
+  &__worksItem{
+
+  }
+
+  &__worksImg{
   }
 
   &__worksTitle{

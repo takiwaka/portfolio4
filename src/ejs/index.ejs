@@ -1,41 +1,50 @@
 <% var title="河北ポートフォリオ4" ; var description="トップのdescription" ; %>
-<% include src/ejs/template/_head %>
+  <% include src/ejs/template/_head %>
 
-<!-- <% include src/ejs/template/_load %> -->
+    <!-- <% include src/ejs/template/_load %> -->
 
-<div class="l-wrap jsc-load">
+    <div class="l-wrap jsc-load">
 
-    <ul class="p-pager jsc-pager"></ul>
+      <ul class="p-pager jsc-pager"></ul>
 
-    <div class="p-hero scrollify" data-section-name="top">
-      <div class="p-hero__yellow">
-        <h1 class="p-hero__heading">KAZUYA</h1>
+      <div class="p-hero scrollify" data-section-name="top">
+        <div class="p-hero__yellow">
+          <h1 class="p-hero__heading">KAZUYA</h1>
+        </div>
+        <div class="p-hero__gray">
+          <h1 class="p-hero__heading">KAWAKITA</h1>
+        </div>
+        <div class="p-hero__scroll">
+          <div class="p-hero__scrollText">scroll</div>
+          <div class="p-hero__scrollIcon">↓</div>
+
+        </div>
       </div>
-      <div class="p-hero__gray">
-        <h1 class="p-hero__heading">KAWAKITA</h1>
-      </div>
-      <div class="p-hero__scroll">
-        <div class="p-hero__scrollText">scroll</div>
-        <div class="p-hero__scrollIcon">↓</div>
 
-      </div>
-    </div>
-
-    <div class="p-menu__item scrollify" data-section-name="about">
+      <div class="p-menu__item scrollify" data-section-name="about">
         <a href="about.html" class="p-menu__about"></a>
-    </div>
-
-    <div class="p-menu__item scrollify" data-section-name="works">
-      <div class="p-menu__worksBox">
-        <a class="p-menu__worksTitle" href="works.html">作品</a>
-        
       </div>
-    </div>
 
-    <div class="p-menu__item scrollify" data-section-name="contact">
-      <a href="api/contact.php">contact</a>
+      <div class="p-menu__item scrollify" data-section-name="works">
+        <div class="p-menu__worksBox">
+          <!-- <a class="p-menu__worksTitle" href="works.html">作品</a> -->
+          <ul class="p-menu__workslist">
+            <li class="p-menu__worksItem">
+<img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
+            </li>
+<li></li>
+
+
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="p-menu__item scrollify" data-section-name="contact">
+        <a href="api/contact.php">contact</a>
+      </div>
+      <% include src/ejs/template/_footer %>
     </div>
-  <% include src/ejs/template/_footer %>
-</div>
-</body>
-</html>
+    </body>
+
+    </html>
