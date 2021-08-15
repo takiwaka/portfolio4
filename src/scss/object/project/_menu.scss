@@ -19,6 +19,7 @@
     &:nth-child(even) {
       background-color: $colorGray;
     }
+    flex-direction: column;
   }
 
   &__about {
