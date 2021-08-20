@@ -1,6 +1,4 @@
 import $ from "jquery";
-import "arc-text";
-
 $(function () {
 
   $(window).on("load",function () {
@@ -15,24 +13,4 @@ $(function () {
     }
   });
 
-});
-
-$(function() {
-  $("#sample1").arctext({
-      radius : 200,
-  });
-  
-  $("#sample2").arctext({
-      radius : 150,
-  });
-  
-  $("#sample3").arctext({
-      radius : 150,
-      dir: -1,
-  });
-  
-  $("#sample4").arctext({
-      radius : 200,
-      rotate: false,
-  });
 });

@@ -1,5 +1,5 @@
 import $ from "jquery";
-import "jquery-scrollify";
+
 
 $(function () {
   var current;

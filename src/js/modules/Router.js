@@ -1,5 +1,4 @@
 import "jquery-scrollify";
-import "arc-text";
 import load from '../pages/load'
 import scroll from '../pages/scroll'
 import toggle from '../pages/toggle'
