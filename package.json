@@ -41,7 +41,6 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "arc-text": "^1.0.1",
     "extract-hash-webpack-plugin": "^1.1.3",
     "jquery": "^3.6.0",
     "jquery-scrollify": "^1.0.21",

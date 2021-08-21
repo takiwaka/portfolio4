@@ -1,6 +1,4 @@
 import $ from "jquery";
-import "arc-text";
-
 $(function () {
 
   $(window).on("load",function () {
