@@ -40,35 +40,38 @@
     height: 30vh;
   }
 
-  &__worksList{
-    display: flex;
-width: 100%;
-height: 100%;
+  &__worksItem {
   }
 
-  &__worksItem{
-
-  }
-
-  &__worksImg{
-    width: auto;
-    height: 30vh;
-  }
-
-  &__worksTitle{
+  &__worksTitle {
     font-size: 2em;
   }
 
-}
+  &__worksWrap {
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    &:hover ul {
+      animation-play-state: paused;
+    }
+  }
 
-.sample {
-  text-align: center;
-  color: #D09B4A;
-  margin: 5rem auto;
-  font-weight: bold;
-  font-size: 1.6rem;
-}
+  &__worksList {
+    display: flex;
+    width: 100%;
+    height: 100%;
 
-#sample3 {
-  margin-top: 16rem;
+    &:first-child {
+      animation: loop 50s -25s linear infinite;
+    }
+    &:last-child {
+      animation: loop2 50s linear infinite;
+    }
+  }
+
+  &__worksImg {
+    width: auto;
+    height: 30vh;
+  }
 }

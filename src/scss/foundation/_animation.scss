@@ -6,3 +6,21 @@
 // animation-direction: ; //normal,reverse,alternate,alternate-reverse
 // animation-fill-mode: ; //none,forwards,backwards,both
 // animation-play-state: ; //running,paused (animationを止める)
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
