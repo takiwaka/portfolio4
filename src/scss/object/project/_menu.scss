@@ -36,7 +36,6 @@
   }
 
   &__worksBox {
-
   }
 
   &__worksWrap {
@@ -74,18 +73,14 @@
       width: 50vw;
     }
     @include mq(u-sp) {
-width: 30vh;
+      width: 30vh;
     }
-
-
   }
 
   &__worksImg {
-width: 100%;
-height: auto;
   }
 
   &__worksTitle {
-    font-size: 2em;
+    text-align: center;
   }
 }
