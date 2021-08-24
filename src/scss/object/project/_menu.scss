@@ -36,15 +36,15 @@
   }
 
   &__worksBox {
+    height: 100vh;
   }
 
   &__worksWrap {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    width: 100vw;
 
-    // height: 100%;
+    height: 100vh;
 
     overflow: hidden;
     &:hover ul {
@@ -54,8 +54,7 @@
 
   &__worksList {
     display: flex;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     backface-visibility: hidden;
     will-change: transform;
 
@@ -70,14 +69,16 @@
   &__worksItem {
     display: inline-block;
     @include mq(o-sp) {
-      width: 50vw;
+      height: 100vh;
     }
     @include mq(u-sp) {
-      width: 30vh;
+      height: 100vh;
     }
   }
 
   &__worksImg {
+    height: 100vh;
+    width: auto;
   }
 
   &__worksTitle {
