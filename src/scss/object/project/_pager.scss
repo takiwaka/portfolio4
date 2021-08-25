@@ -1,6 +1,7 @@
 
 .p-pager {
   @include mq(o-sp) {
+    z-index: 1;
     position: fixed;
     top:50%;
     left: 0;

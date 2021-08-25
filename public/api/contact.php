@@ -113,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="p-contact__row">
                                         <div class="p-contact__button">
                                                 <button type="submit">確認画面へ</button>
+                                                <p>※実際に動作しますが、対応は行っておりません。ご了承ください</p>
                                         </div>
                                 </div>
                         </form>

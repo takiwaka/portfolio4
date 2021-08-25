@@ -45,7 +45,7 @@ function createPager() {
     html += '</li>';
     $pager.append(html);
   });
-  
+
   pagerLink();
 }
 
