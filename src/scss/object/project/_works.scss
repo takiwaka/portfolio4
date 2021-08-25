@@ -1,3 +1,55 @@
 .p-works {
   
 }
+.p-menu {
+
+  &__worksBox {
+    height: 100vh;
+  }
+  
+  &__worksWrap {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    height: 100vh;
+    
+    overflow: hidden;
+    &:hover ul {
+      animation-play-state: paused;
+    }
+  }
+  
+  &__worksList {
+    display: flex;
+    height: 100vh;
+    backface-visibility: hidden;
+    will-change: transform;
+    
+    &:first-child {
+      animation: loop 50s -25s linear infinite;
+    }
+    &:last-child {
+      animation: loop2 50s linear infinite;
+    }
+  }
+  
+  &__worksItem {
+    display: inline-block;
+    @include mq(o-sp) {
+      height: 100vh;
+    }
+    @include mq(u-sp) {
+      height: 100vh;
+    }
+  }
+  
+  &__worksImg {
+    height: 100vh;
+    width: auto;
+  }
+  
+  &__worksTitle {
+    text-align: center;
+  }
+}

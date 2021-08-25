@@ -2,7 +2,7 @@
 .p-pager {
   @include mq(o-sp) {
     position: fixed;
-    top: 20%;
+    top:50%;
     left: 0;
     transform: translateY(-50%);
     padding: 0;

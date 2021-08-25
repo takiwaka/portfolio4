@@ -3,26 +3,41 @@
   }
   @include mq(u-sp) {
   }
-
+  
   &__item {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     @include mq(o-sp) {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
     }
     @include mq(u-sp) {
       width: 100%;
       height: 100vh;
     }
-    &:nth-child(even) {
-      background-color: $colorGray;
-    }
     flex-direction: column;
   }
 
+  &__linkList{
+display: flex;
+justify-content: center;
+height: 20px;
+
+  }
+  
+  &__hero{
+    position: absolute;
+display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
   &__about {
+display: block;
     width: 50vw;
     height: 50vw;
     max-width: 80vh;
@@ -35,53 +50,4 @@
     background-repeat: no-repeat;
   }
 
-  &__worksBox {
-    height: 100vh;
-  }
-
-  &__worksWrap {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-
-    height: 100vh;
-
-    overflow: hidden;
-    &:hover ul {
-      animation-play-state: paused;
-    }
-  }
-
-  &__worksList {
-    display: flex;
-    height: 100vh;
-    backface-visibility: hidden;
-    will-change: transform;
-
-    &:first-child {
-      animation: loop 50s -25s linear infinite;
-    }
-    &:last-child {
-      animation: loop2 50s linear infinite;
-    }
-  }
-
-  &__worksItem {
-    display: inline-block;
-    @include mq(o-sp) {
-      height: 100vh;
-    }
-    @include mq(u-sp) {
-      height: 100vh;
-    }
-  }
-
-  &__worksImg {
-    height: 100vh;
-    width: auto;
-  }
-
-  &__worksTitle {
-    text-align: center;
-  }
 }
