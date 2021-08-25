@@ -3,10 +3,10 @@
   }
   @include mq(u-sp) {
   }
-  
+
   &__item {
     position: relative;
-    display: flex;
+
     @include mq(o-sp) {
       width: 100vw;
       height: 100vh;
@@ -15,29 +15,34 @@
       width: 100%;
       height: 100vh;
     }
-    flex-direction: column;
   }
 
-  &__linkList{
-display: flex;
-justify-content: center;
-height: 20px;
-
-  }
-  
-  &__hero{
-    position: absolute;
-display: flex;
-    text-align: center;
+  &__linkList {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-end;
+    width: auto;
+    height: 100px;
+    :not(:last-child) {
+      margin-right: 20px;
+  }
+  }
 
-}
+  &__link{
+width: 100%;
 
+  }
+
+  &__hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
 
   &__about {
-display: block;
+    display: block;
     width: 50vw;
     height: 50vw;
     max-width: 80vh;
@@ -49,5 +54,4 @@ display: block;
     background-size: cover;
     background-repeat: no-repeat;
   }
-
 }
