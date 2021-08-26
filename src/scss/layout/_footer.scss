@@ -1,15 +1,15 @@
 .l-footer {
-  height: 50vh;
   background-color: #000;
   @include mq(o-sp) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    height: 50vh;
     padding-bottom: 20px;
   }
   @include mq(u-sp) {
   }
-
+  
   
   &__inner {
     display: flex;
@@ -20,6 +20,7 @@
     @include mq(u-sp) {
       display: block;
       width: 100%;
+
     }
   }
 
@@ -33,6 +34,7 @@
 
   &__listItem {
     display: flex;
+    align-items: center;
     @include mq(o-sp) {
       width: 25%;
       font-size: 1rem;
@@ -43,9 +45,9 @@
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
-      &:nth-child(n+3) {
+      
         margin-top: 50px;
-      }
+      
     }
   }
 

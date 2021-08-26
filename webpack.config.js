@@ -43,12 +43,8 @@ module.exports = (env, argv) => {
         template: "src/ejs/index.ejs",
       }),
       new HtmlWebpackPlugin({
-        filename: "about/about.html",
+        filename: "about.html",
         template: "src/ejs/about/index.ejs",
-      }),
-      new HtmlWebpackPlugin({
-        filename: "skill.html",
-        template: "src/ejs/skill/index.ejs",
       }),
       new HtmlWebpackPlugin({
         filename: "works.html",

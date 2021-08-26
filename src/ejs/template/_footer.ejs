@@ -1,7 +1,8 @@
-<% var linkArray=[ {'link':'#about','name':'ABOUT',},
-{'link':'#skill','name':'SKILL',},
-{'link':'#works','name':'WORKS',},
-{'link':'#contact','name':'CONTACT',}, ];%>
+<% var linkArray=[
+{'link':'#about','name':'TOP',},
+{'link':'about.html','name':'ABOUT',},
+{'link':'works.html','name':'WORKS',},
+{'link':'api/contact.php','name':'CONTACT',}, ];%>
 
 <% var snsArray=[
 {'link':'https://www.youtube.com/','name':'youtube',},
@@ -16,7 +17,7 @@
     <ul class="l-footer__list">
 
         <% for (var key in linkArray) {%>
-          <li class="l-footer__listItem jsc-nav-close">
+          <li class="l-footer__listItem">
             <a href="<%= linkArray[key].link %>">
               <%= linkArray[key].name %>
             </a>
@@ -43,7 +44,6 @@
 
     <!-- l-footer__sns -->
   </div>
-  <a href="#" class="l-footer__logo">
   </a>
   <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
 </footer>
