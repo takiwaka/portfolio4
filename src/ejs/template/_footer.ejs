@@ -1,3 +1,49 @@
-<footer class="l-footer scrollify" data-section-name="footer">
+<% var linkArray=[ {'link':'#about','name':'ABOUT',},
+{'link':'#skill','name':'SKILL',},
+{'link':'#works','name':'WORKS',},
+{'link':'#contact','name':'CONTACT',}, ];%>
 
+<% var snsArray=[
+{'link':'https://www.youtube.com/','name':'youtube',},
+{'link':'https://www.instagram.com/','name':'instagram',},
+{'link':'https://www.facebook.com/','name':'facebook-f',},
+{'link':'https://twitter.com/','name':'twitter',}, ];%>
+
+
+
+<footer class="l-footer scrollify" data-section-name="footer">
+  <div class="l-footer__inner">
+    <ul class="l-footer__list">
+
+        <% for (var key in linkArray) {%>
+          <li class="l-footer__listItem jsc-nav-close">
+            <a href="<%= linkArray[key].link %>">
+              <%= linkArray[key].name %>
+            </a>
+          </li>
+          <% } %>
+      </ul>
+
+
+      <div class="l-footer__others">
+
+        <ul class="l-footer__sns">
+          <% for (var key in snsArray) {%>
+            <li class="l-footer__snsItem">
+              <a href="<%= snsArray[key].link %>">
+                <i class="fab fa-<%= snsArray[key].name %>"></i>
+              </a>
+            </li>
+            <% } %>
+        </ul>
+
+        <p class="l-footer__copy u-hidden-sp">Copyright © 2021 K.KAWAKITA</p>
+      </div>
+
+
+    <!-- l-footer__sns -->
+  </div>
+  <a href="#" class="l-footer__logo">
+  </a>
+  <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
 </footer>
