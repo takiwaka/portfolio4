@@ -1,21 +1,22 @@
 .l-footer {
+  color: $colorGray;
   background-color: #000;
   @include mq(o-sp) {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+flex-direction: row;
+
     height: 50vh;
     padding-bottom: 20px;
   }
   @include mq(u-sp) {
   }
-  
-  
+
   &__inner {
     display: flex;
     @include mq(o-sp) {
       flex-wrap: wrap;
-      width: 75%;
+width: 100%;
+margin: 0 50px;
     }
     @include mq(u-sp) {
       display: block;
@@ -51,13 +52,6 @@
     }
   }
 
-  &__others {
-    color: $colorGray;
-    @include mq(o-sp) {
-      display: flex;
-      width: 100%;
-    }
-  }
 
   &__sns {
     display: flex;
@@ -97,18 +91,4 @@
     }
   }
 
-  &__logo {
-    @include mq(o-sp) {
-      display: flex;
-      align-items: center;
-      width: 25%;
-      margin-right: 5vw;
-    }
-    @include mq(u-sp) {
-      display: block;
-      width: 100%;
-      margin-bottom: 50px;
-    }
-  }
-color: #FFF;
 }
