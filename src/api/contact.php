@@ -36,9 +36,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="ja">
 
 <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="description" content="トップのdescription" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" href="../../assets/images/favicon.ico" />
         <title>お問合せ</title>
-        <link rel="stylesheet" type="text/css" href="/public/assets/stylesheets/bundle.<?php echo $HASH ?>.css">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/bundle.<?php echo $HASH ?>.css">
 </head>
 
 <body>
@@ -119,6 +123,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </form>
                 </div>
         </div>
-</body>
-
-</html>
+        <?php include('hooter.php') ?>

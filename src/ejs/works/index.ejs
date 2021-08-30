@@ -1,10 +1,10 @@
 <% var title="河北のポートフォリオ4-works" ; var description="worksのdescription" ; %>
 
   <% var worksArray=[
-{'number':'01','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio1/',},
-{'number':'02','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio2/',},
-{'number':'03','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio3/public/index.html',},
-{'number':'04','text':'ポートフォリオの説明','link':'https://takiwaka.sakura.ne.jp',}, ];%>
+{'number':'01','text':'BOOTSTRAPを活用した基本的なLP作成','link':'https://takiwaka.github.io/portfolio1/',},
+{'number':'02','text':'LP用の基本的な表示、レスポンシブ対応の記述、SCSS<br>・ハンバーガー（CSSのみ）<br>・カード（レスポンシブ、flex)<br>・テーブル<br>・googlemap埋め込み<br>・ラジオButton<br>・チェックボックス','link':'https://takiwaka.github.io/portfolio2/',},
+{'number':'03','text':'webpack(yarn)を用いた開発<br>・ejsを活用したテンプレート運用<br>・BEM思想の取り入れ<br>・SCSS(import,ネスト,変数)<br>・cssアニメーションを利用した、動きのあるサイト構築<br>・jqueryプラグインのカスタマイズ<br>・fontファイルの利用<br>・FontAwesomeの利用(必要な分だけバンドルさせる)<br>・GoogleFORMカスタマイズ','link':'https://takiwaka.github.io/portfolio3/public/index.html',},
+{'number':'04','text':'・複数ページの作成<br>・サーバーレンタル<br>・PHPを利用した問い合わせフォームの作成<br>・jqueryプラグインscrollify導入<br>・ejs及びtarget属性を活用した記述の簡略化','link':'https://takiwaka.sakura.ne.jp',}, ];%>
 
     <% include src/ejs/template/_head %>
       <div class="p-menu__item scrollify" data-section-name="top">
@@ -33,11 +33,11 @@
 
           <% for (var key in worksArray) {%>
           <div id="pop<%= worksArray[key].number %>" class="c-pop jsc-pop-content">
-            <div class="c-pop__bg p-works__bg jsc-pop-close"></div>
+            <div class="c-pop__bg p-works__bg p-works__bg--<%= worksArray[key].number %> jsc-pop-close"></div>
             <div class="c-pop__main">
               <p class="c-pop__text">
                 ポートフォリオ<%= worksArray[key].number %><br>
-                <%= worksArray[key].text %><br>
+                <%- worksArray[key].text %><br>
                 <a class="u-link-underLine" href="<%= worksArray[key].link %>" target="_blank"><%= worksArray[key].link %></a>
               </p>
             </div>

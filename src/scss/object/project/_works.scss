@@ -60,8 +60,20 @@
   }
 
   &__bg {
-    background-image: url("#{$bgPath}image-works-01.png");
     background-position: center;
     background-size: cover;
+    
+    &--01{
+  background-image: url("#{$bgPath}image-works-01.png");
+}
+    &--02{
+  background-image: url("#{$bgPath}image-works-02.png");
+}
+    &--03{
+  background-image: url("#{$bgPath}image-works-03.png");
+}
+    &--04{
+  background-image: url("#{$bgPath}image-works-04.png");
+}
   }
 }
