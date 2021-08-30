@@ -1,8 +1,42 @@
 .p-about {
-
+  position: relative;
+  height: 100vh;
   @include mq(o-sp) {
   }
   @include mq(u-sp) {
   }
 
+  &__textBox {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  &__text {
+    background-color: $colorGray;
+    opacity: 0.8;
+    padding: 10px;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: 48vh;
+  }
 }

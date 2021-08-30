@@ -1,11 +1,27 @@
-
 <% var title="河北のポートフォリオ4-ABOUT" ; var description="ABOUTのdescription" ; %>
 
-<% include src/ejs/template/_head %>
-<% include src/ejs/template/_header %>
+  <% include src/ejs/template/_head %>
+    <div class="p-menu__item scrollify" data-section-name="top">
+      <% include src/ejs/template/_header %>
 
-<% include src/ejs/template/_footer %>
-</div>
-</body>
+        <div class="p-about">
+          <div class="p-about__textBox">
+            <h2 class="p-about__title">
+              ABOUT
+            </h2>
+            <p class="p-about__text">電力会社勤務→クラフトビール醸造所勤務→地酒専門店での日本酒・焼酎の販売を経て、 フロントエンドエンジニアを目指し学習中の身です。<br>
+              <br>
+              ジャパンホームブルワーズ協会会員<br>
+              <br>
+              ビールが好き過ぎて、サッポロビールのオリジナルビール作り企画に採用されました！<br>
+              <a class="p-about__link" href="https://www.hoppin-garage.com/prototype/igusa/"  target="_blank">
+                https://www.hoppin-garage.com/prototype/igusa/</a>
+            </p>
+          </div>
 
-</html>
+
+          <img class="p-about__img" src="assets/images/image-about-01.png" alt="">
+        </div>
+
+    </div><!-- p-menu__item -->
+    <% include src/ejs/template/_footer %>

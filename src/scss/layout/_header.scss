@@ -1,1 +1,26 @@
+.l-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  &__linkList {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 15vh;
+    padding-right: 20px;
+    :not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 
+  &__link {
+    width: 100%;
+    @include mq(o-sp) {
+      font-size: 1rem;
+    }
+    @include mq(u-sp) {
+      font-size: 0, 5rem;
+    }
+  }
+}

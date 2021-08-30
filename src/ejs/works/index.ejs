@@ -1,11 +1,13 @@
 <% var title="河北のポートフォリオ4-works" ; var description="worksのdescription" ; %>
 
 <% include src/ejs/template/_head %>
+<div class="p-menu__item scrollify" data-section-name="top">
 <% include src/ejs/template/_header %>
+
 <div class="p-menu__worksBox">
-  <p class="p-menu__worksTitle">制作物</p>
-
-  <a href="works.html" class="p-menu__worksWrap">
+  
+  <h2 class="p-menu__worksTitle">WORKS</h2>
+  <div class="p-menu__worksWrap">
     <ul class="p-menu__worksList">
       <li class="p-menu__worksItem">
         <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
@@ -35,9 +37,9 @@
         <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
       </li>
     </ul>
-  </a>
-<% include src/ejs/template/_footer %>
+  </div>
 </div>
+<% include src/ejs/template/_footer %>
 </body>
 
 </html>

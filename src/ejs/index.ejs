@@ -1,35 +1,17 @@
 <% var title="河北のポートフォリオ4" ; var description="トップのdescription" ; %>
 
   <% include src/ejs/template/_head %>
+    <!-- <% include src/ejs/template/_load %> -->
+    <div class="p-menu__item scrollify" data-section-name="top">
+      <% include src/ejs/template/_header %>
 
-    <% include src/ejs/template/_load %>
-
-      <div class="l-wrap jsc-load">
-
-        <ul class="p-pager jsc-pager"></ul>
-
-        <div class="p-menu__item scrollify" data-section-name="top">
-
-          <ul class="p-menu__linkList">
-            <li>
-              <a href="about.html" class="p-menu__link">河北一也について</a>
-            </li>
-            <li>
-              <a href="works.html" class="p-menu__link">制作物</a>
-            </li>
-            <li>
-              <a href="api/contact.php" class="p-menu__link">お問い合わせ</a>
-            </li>
-          </ul>
-
+        <div class="p-menu__heroBox">
           <div class="p-menu__hero">
+
             <p class="p-menu__aboutText">↓click!</p>
             <a href="about.html" class="p-menu__about"></a>
           </div>
         </div>
 
+        </div><!-- p-menu__item -->
         <% include src/ejs/template/_footer %>
-      </div>
-      </body>
-
-      </html>
