@@ -20,6 +20,10 @@
     &:hover ul {
       animation-play-state: paused;
     }
+
+    &.is-stop ul {
+      animation-play-state: paused;
+    }
   }
 
   &__list {
@@ -55,4 +59,9 @@
     text-align: center;
   }
 
+  &__bg {
+    background-image: url("#{$bgPath}images-works-01.png");
+    background-position: center;
+    background-size: cover;
+  }
 }

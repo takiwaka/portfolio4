@@ -1,12 +1,15 @@
 import $ from "jquery";
 $(function () {
+  var $popContent = $(".jsc-pop-content");
+  var $popStop = $(".jsc-pop-stop");
 
   $(".jsc-pop-button").on("click", function () {
-    var $popContent = $(".jsc-pop-content");
-    $(this).next($popContent).fadeIn();
+    $popContent.fadeIn();
+    $popStop.addClass("is-stop");
   });
 
   $(".jsc-pop-close").on("click", function () {
-    $(".jsc-pop-content").fadeOut();
+    $popStop.removeClass("is-stop");
+    $popContent.fadeOut();
   });
 });
