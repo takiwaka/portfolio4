@@ -1,7 +1,10 @@
 <% var title="河北のポートフォリオ4-works" ; var description="worksのdescription" ; %>
 
-  <% var worksArray=[ {'number':'01','text':'ポートフォリオの説明',}, {'number':'02','text':'ポートフォリオの説明',},
-    {'number':'03','text':'ポートフォリオの説明',}, {'number':'04','text':'ポートフォリオの説明',}, ];%>
+  <% var worksArray=[
+{'number':'01','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio1/',},
+{'number':'02','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio2/',},
+{'number':'03','text':'ポートフォリオの説明','link':'https://takiwaka.github.io/portfolio3/public/index.html',},
+{'number':'04','text':'ポートフォリオの説明','link':'https://takiwaka.sakura.ne.jp',}, ];%>
 
     <% include src/ejs/template/_head %>
       <div class="p-menu__item scrollify" data-section-name="top">
@@ -24,28 +27,22 @@
                     </li>
                     <% } %>
                 </ul>
-
                 <% } %>
             </div>
           </div>
 
-          <div id="pop01" class="c-pop jsc-pop-content">
+          <% for (var key in worksArray) {%>
+          <div id="pop<%= worksArray[key].number %>" class="c-pop jsc-pop-content">
             <div class="c-pop__bg p-works__bg jsc-pop-close"></div>
             <div class="c-pop__main">
               <p class="c-pop__text">
-                ポートフォリオ01
-                <a class="u-link-underLine" href="" target="_blank">aa</a>
+                ポートフォリオ<%= worksArray[key].number %><br>
+                <%= worksArray[key].text %><br>
+                <a class="u-link-underLine" href="<%= worksArray[key].link %>" target="_blank"><%= worksArray[key].link %></a>
               </p>
             </div>
           </div>
-          <div id="pop02" class="c-pop jsc-pop-content">
-            <div class="c-pop__bg p-works__bg jsc-pop-close"></div>
-            <div class="c-pop__main">
-              <p class="c-pop__text">
-                ポートフォリオ01
-                <a class="u-link-underLine" href="" target="_blank">aa</a>
-              </p>
-            </div>
-          </div>
+          <% } %>
+
 
           <% include src/ejs/template/_footer %>
