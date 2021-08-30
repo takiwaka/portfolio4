@@ -1,30 +1,22 @@
-<% var linkArray=[
-{'link':'index.html','name':'TOP',},
-{'link':'about.html','name':'ABOUT',},
-{'link':'works.html','name':'WORKS',},
-{'link':'api/contact.php','name':'CONTACT',}, ];%>
+<% var linkArray=[ {'link':'index.html','name':'TOP',}, {'link':'about.html','name':'ABOUT',},
+  {'link':'works.html','name':'WORKS',}, {'link':'api/contact.php','name':'CONTACT',}, ];%>
 
-<% var snsArray=[
-{'link':'https://www.youtube.com/','name':'youtube',},
-{'link':'https://www.instagram.com/','name':'instagram',},
-{'link':'https://www.facebook.com/','name':'facebook-f',},
-{'link':'https://twitter.com/','name':'twitter',}, ];%>
+  <% var snsArray=[ {'link':'https://www.youtube.com/','name':'youtube',},
+    {'link':'https://www.instagram.com/','name':'instagram',},
+    {'link':'https://www.facebook.com/','name':'facebook-f',}, {'link':'https://twitter.com/','name':'twitter',}, ];%>
 
-<footer class="l-footer scrollify" data-section-name="footer">
-  <div class="l-footer__inner">
-    <ul class="l-footer__list">
+    <footer class="l-footer scrollify" data-section-name="footer">
+      <div class="l-footer__inner">
+        <ul class="l-footer__list">
 
-        <% for (var key in linkArray) {%>
-          <li class="l-footer__listItem">
-            <a href="<%= linkArray[key].link %>">
-              <%= linkArray[key].name %>
-            </a>
-          </li>
-          <% } %>
-      </ul>
-
-
-
+          <% for (var key in linkArray) {%>
+            <li class="l-footer__listItem">
+              <a href="<%= linkArray[key].link %>">
+                <%= linkArray[key].name %>
+              </a>
+            </li>
+            <% } %>
+        </ul>
 
         <ul class="l-footer__sns">
           <% for (var key in snsArray) {%>
@@ -38,13 +30,13 @@
 
         <p class="l-footer__copy u-hidden-sp">Copyright © 2021 K.KAWAKITA</p>
 
-    <!-- l-footer__sns -->
+        <!-- l-footer__sns -->
 
-  </div>
-  </a>
-  <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
-</footer>
-</div><!-- l-wrap -->
-</body>
+      </div>
+      </a>
+      <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
+    </footer>
+    </div><!-- l-wrap -->
+    </body>
 
-</html>
+    </html>

@@ -1,21 +1,28 @@
 .p-works {
-}
-.p-menu {
-  &__worksBox {
+  &__box {
     position: relative;
     height: 100vh;
+    overflow: hidden;
+  }
+  &__title {
+    padding-top: 15vh;
+    font-size: 2rem;
+    text-align: center;
   }
 
-  &__worksWrap {
+  &__wrap {
     position: absolute;
     top: 25%;
     display: flex;
     height: 50vh;
     flex-wrap: nowrap;
-    overflow: hidden;
+
+    &:hover ul {
+      animation-play-state: paused;
+    }
   }
 
-  &__worksList {
+  &__list {
     display: flex;
     backface-visibility: hidden;
     will-change: transform;
@@ -25,29 +32,27 @@
     &:last-child {
       animation: loop2 50s linear infinite;
     }
-    &:hover {
-      animation-play-state: paused;
-    }
   }
 
-  &__worksItem {
+  &__item {
     display: inline-block;
     margin-right: 10px;
+    height: 50vh;
     @include mq(o-sp) {
-      height: 100%;
     }
     @include mq(u-sp) {
     }
   }
 
-  &__worksImg {
-    height: 100%;
+  &__img {
+    height: 50vh;
     width: auto;
   }
 
-  &__worksTitle {
-    padding-top: 15vh;
-    font-size: 2rem;
+  &__text {
+    margin-top: 5px;
+    color: #333;
     text-align: center;
   }
+
 }

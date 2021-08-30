@@ -3,6 +3,7 @@ import load from '../pages/load'
 import scroll from '../pages/scroll'
 import toggle from '../pages/toggle'
 import scrollify from '../pages/scrollify'
+import pop from '../pages/pop'
 
 
 export default class Router {
@@ -28,6 +29,9 @@ export default class Router {
         break
       case '/scrollify':
         new scrollify()
+        break
+      case '/pop':
+        new pop()
         break
       default:
         break

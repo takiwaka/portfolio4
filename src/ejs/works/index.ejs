@@ -1,45 +1,62 @@
 <% var title="河北のポートフォリオ4-works" ; var description="worksのdescription" ; %>
 
-<% include src/ejs/template/_head %>
-<div class="p-menu__item scrollify" data-section-name="top">
-<% include src/ejs/template/_header %>
+  <% include src/ejs/template/_head %>
+    <div class="p-menu__item scrollify" data-section-name="top">
+      <% include src/ejs/template/_header %>
 
-<div class="p-menu__worksBox">
-  
-  <h2 class="p-menu__worksTitle">WORKS</h2>
-  <div class="p-menu__worksWrap">
-    <ul class="p-menu__worksList">
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-    </ul>
+        <div class="p-works__box">
 
-    <ul class="p-menu__worksList">
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-      <li class="p-menu__worksItem">
-        <img class="p-menu__worksImg" src="assets/images/image-menu-02.png" alt="ポートフォリオ01">
-      </li>
-    </ul>
-  </div>
-</div>
-<% include src/ejs/template/_footer %>
-</body>
+          <h2 class="p-works__title">WORKS</h2>
+          <div class="p-works__wrap">
+            <ul class="p-works__list">
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-01.png" alt="ポートフォリオ01画像">
+                <p class="p-works__text">ポートフォリオ01</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-02.png" alt="ポートフォリオ02画像">
+                <p class="p-works__text">ポートフォリオ02</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-03.png" alt="ポートフォリオ03画像">
+                <p class="p-works__text">ポートフォリオ03</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-04.png" alt="ポートフォリオ04画像">
+                <p class="p-works__text">ポートフォリオ04</p>
+              </li>
 
-</html>
+            </ul>
+
+            <ul class="p-works__list">
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-01.png" alt="ポートフォリオ01画像">
+                <p class="p-works__text">ポートフォリオ01</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-02.png" alt="ポートフォリオ02画像">
+                <p class="p-works__text">ポートフォリオ02</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-03.png" alt="ポートフォリオ03画像">
+                <p class="p-works__text">ポートフォリオ03</p>
+              </li>
+              <li class="p-works__item jsc-pop-button">
+                <img class="p-works__img" src="assets/images/image-works-04.png" alt="ポートフォリオ04画像">
+                <p class="p-works__text">ポートフォリオ04</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c-pop jsc-pop-content">
+          <div class="c-pop__bg p-about__bg jsc-pop-close"></div>
+          <div class="c-pop__main">
+            <p class="c-pop__text">
+              ポートフォリオ01
+              <a class="u-link-underLine" href="" target="_blank">aa</a>
+            </p>
+          </div>
+        </div>
+        
+        <% include src/ejs/template/_footer %>
