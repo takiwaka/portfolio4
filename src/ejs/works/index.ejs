@@ -16,7 +16,7 @@
 
                 <ul class="p-works__list">
                   <% for (var key in worksArray) {%>
-                    <li class="p-works__item jsc-pop-button" data-target="pop-<%= worksArray[key].number %>">
+                    <li class="p-works__item jsc-pop-button" data-target="pop<%= worksArray[key].number %>">
                       <img class="p-works__img" src="assets/images/image-works-<%= worksArray[key].number %>.png"
                         alt="ポートフォリオ<%= worksArray[key].number %>画像">
                       <p class="p-works__text">ポートフォリオ<%= worksArray[key].number %>
@@ -29,7 +29,16 @@
             </div>
           </div>
 
-          <div id="pop-01" class="c-pop jsc-pop-content">
+          <div id="pop01" class="c-pop jsc-pop-content">
+            <div class="c-pop__bg p-works__bg jsc-pop-close"></div>
+            <div class="c-pop__main">
+              <p class="c-pop__text">
+                ポートフォリオ01
+                <a class="u-link-underLine" href="" target="_blank">aa</a>
+              </p>
+            </div>
+          </div>
+          <div id="pop02" class="c-pop jsc-pop-content">
             <div class="c-pop__bg p-works__bg jsc-pop-close"></div>
             <div class="c-pop__main">
               <p class="c-pop__text">
