@@ -21,8 +21,27 @@ $error = [];
 <body>
   <div class="l-wrap">
 
-    <h3 class="p-thanks">thanks</h3>
-    <a href="../index.html">メイン画面へ戻る</a>
+    <div class="p-thanks">
+
+      <div class="p-thanks__content">
+        <h3 class="p-thanks__text">thanks!</h3>
+        <a class="p-thanks__link" href="../index.html">メイン画面へ戻る</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </div><!-- l-wrap -->
@@ -30,5 +49,3 @@ $error = [];
 </body>
 
 </html>
-
-

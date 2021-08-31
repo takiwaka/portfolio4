@@ -51,11 +51,11 @@ EOT;
 
                 <div class="p-confirm__wrap">
 
-                    <p class="p-confirm__title">お問い合わせ内容</p>
+                    <p class="p-confirm__title">問い合わせ内容</p>
 
                     <div class="p-confirm__item">
                         <div class="p-confirm__heading">
-                            <label for="inputName">お名前</label>
+                            <label for="inputName">名前</label>
                         </div>
                         <div class="p-confirm__content">
                             <p class="p-confirm__text"><?php echo htmlspecialchars($post['name']); ?></p>
@@ -73,7 +73,7 @@ EOT;
 
                     <div class="p-confirm__item">
                         <div class="p-confirm__heading">
-                            <label for="inputContent">お問い合わせ内容</label>
+                            <label for="inputContent">問い合わせ内容</label>
                         </div>
                         <div class="p-confirm__content">
                             <p class="p-confirm__text"><?php echo nl2br(htmlspecialchars($post['contact'])); ?></p>
@@ -82,7 +82,7 @@ EOT;
 
                     <div class="p-confirm__button">
                         <div class="p-confirm__buttonContent">
-                            <a href="contact.php">戻る</a>
+                            <a class="u-link-underLine" href="contact.php">戻る</a>
                             <button type="submit">送信する</button>
                         </div>
                     </div>

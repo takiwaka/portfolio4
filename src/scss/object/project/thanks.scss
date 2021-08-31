@@ -1,31 +1,22 @@
-.l-header {
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.p-thanks {
+  position: relative;
+  height: 100vh;
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: auto;
-    padding-left: 10px;
+  &__content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
   }
 
-  &__linkList {
-    display: flex;
-    align-items: center;
-    width: auto;
-    height: 15vh;
-
-    :not(:last-child) {
-      margin-right: 10px;
-    }
+  &__text{
+    text-align: center;
+    font-size: 2rem;
   }
 
-  &__link {
+  &__link{
+    margin-top: 20px;
     @include mq(o-sp) {
       position: relative;
       display: inline-block;
@@ -67,8 +58,7 @@
         transform: scale(1);
       }
     }
-    @include mq(u-sp) {
-      font-size: 0.8rem;
-    }
   }
+
 }
+

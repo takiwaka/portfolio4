@@ -2,7 +2,6 @@ import $ from "jquery";
 $(function () {
   $(window).on("load", function () {
     $(".jsc-load").addClass("is-active");
-
   });
 
   //n秒たったら強制的にロード画面を非表示
