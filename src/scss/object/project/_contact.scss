@@ -1,34 +1,44 @@
 .p-contact {
   position: relative;
-  height: 100vh;
 
   &__contents {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 15vh;
     @include mq(o-sp) {
       width: 500px;
     }
     @include mq(u-sp) {
-      width: 100%;
+      width: 98%;
     }
   }
 
-  &__heading{
-font-size: 2rem;
+  &__heading {
+    font-size: 2rem;
   }
 
-  &__row{
+  &__row {
     margin-top: 20px;
   }
 
-  &__title{
-font-size: 1rem;
+  &__title {
+    font-size: 1rem;
   }
 
-  &__inputItem{
+  &__require {
+    font-size: 0.5rem;
+  }
+
+  &__inputItem {
+    width: 100%;
     background-color: $colorGray;
   }
 
+  &__error {
+    color: red;
+  }
+
+  &__inputContent {
+    height: 50%;
+  }
 }

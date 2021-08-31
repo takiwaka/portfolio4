@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 <div class="p-contact__input">
                                                         <input type="text" name="name" class="p-contact__inputItem p-contact__inputName" value="<?php echo htmlspecialchars($post['name']); ?>" required autofocus>
                                                         <?php if ($error['name'] === 'blank') : ?>
-                                                                <p class="error_msg">※お名前をご記入下さい</p>
+                                                                <p class="p-contact__error">※お名前をご記入下さい</p>
                                                         <?php endif; ?>
                                                 </div>
                                         </div>
@@ -87,11 +87,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                         <input type="email" name="email" class="p-contact__inputItem p-contact__inputEmail" value="<?php echo htmlspecialchars($post['email']); ?>" required>
 
                                                         <?php if ($error['email'] === 'blank') : ?>
-                                                                <p class="error_msg">※メールアドレスをご記入下さい</p>
+                                                                <p class="p-contact__error">※メールアドレスをご記入下さい</p>
                                                         <?php endif; ?>
 
                                                         <?php if ($error['email'] === 'email') : ?>
-                                                                <p class="error_msg">※メールアドレスを正しくご記入ください</p>
+                                                                <p class="p-contact__error">※メールアドレスを正しくご記入ください</p>
                                                         <?php endif; ?>
                                                 </div>
                                         </div>
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                         <textarea name="contact" rows="10" class="p-contact__inputItem p-contact__inputContent" required><?php echo htmlspecialchars($post['contact']); ?></textarea>
 
                                                         <?php if ($error['contact'] === 'blank') : ?>
-                                                                <p class="error_msg">※お問い合わせ内容をご記入下さい</p>
+                                                                <p class="p-contact__error">※お問い合わせ内容をご記入下さい</p>
                                                         <?php endif; ?>
                                                 </div>
                                         </div>

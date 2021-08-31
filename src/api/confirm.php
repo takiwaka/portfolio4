@@ -33,16 +33,20 @@ EOT;
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>お問合せフォーム</title>
-    <link rel="stylesheet" type="text/css" href="contact.css">
+<meta charset="UTF-8" />
+        <meta name="description" content="トップのdescription" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" href="../../assets/images/favicon.ico" />
+        <title>確認画面</title>
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/bundle.<?php echo $HASH ?>.css">
 </head>
 <body>
     <!-- お問合せフォーム画面 -->
     <div class="container">
         <form action="" method="POST">
             <p>お問い合わせ</p>
-            <div class="form-group">
+            <div class="p-contact">
                 <div class="row">
                     <div class="col-3">
                         <label for="inputName">お名前</label>
@@ -74,7 +78,7 @@ EOT;
             </div>
             <div class="row">
                 <div class="col-9 offset-3">
-                    <a href="index.php">戻る</a>
+                    <a href="contact.php">戻る</a>
                     <button type="submit">送信する</button>
                 </div>
             </div>
