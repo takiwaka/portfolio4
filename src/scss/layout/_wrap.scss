@@ -1,8 +1,10 @@
 .l-wrap {
   position:relative;
   margin: 0 auto;
+  font-family: 'din1451alt';
   color: $colorBlack;
   background-color: $colorMain;
+
   &.is-active {
     display: block;
   }
