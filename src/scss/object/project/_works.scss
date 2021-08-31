@@ -5,7 +5,7 @@
     overflow: hidden;
   }
   &__title {
-    padding-top: 15vh;
+    padding-top: 13vh;
     font-size: 2rem;
     text-align: center;
   }
@@ -62,7 +62,7 @@
   &__bg {
     background-position: center;
     background-size: cover;
-    
+
     &--01{
   background-image: url("#{$bgPath}image-works-01.png");
 }
