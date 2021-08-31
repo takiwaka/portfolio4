@@ -49,39 +49,42 @@ EOT;
         <form action="" method="POST">
             <div class="p-confirm">
 
-                <p class="p-confirm__title">お問い合わせ内容</p>
+                <div class="p-confirm__wrap">
 
-                <div class="p-confirm__item">
-                    <div class="p-confirm__heading">
-                        <label for="inputName">お名前</label>
-                    </div>
-                    <div class="p-confirm__content">
-                        <p class="p-confirm__text"><?php echo htmlspecialchars($post['name']); ?></p>
-                    </div>
-                </div>
+                    <p class="p-confirm__title">お問い合わせ内容</p>
 
-                <div class="p-confirm__item">
-                    <div class="p-confirm__heading">
-                        <label for="inputEmail">メールアドレス</label>
+                    <div class="p-confirm__item">
+                        <div class="p-confirm__heading">
+                            <label for="inputName">お名前</label>
+                        </div>
+                        <div class="p-confirm__content">
+                            <p class="p-confirm__text"><?php echo htmlspecialchars($post['name']); ?></p>
+                        </div>
                     </div>
-                    <div class="p-confirm__content">
-                        <p class="p-confirm__text"><?php echo htmlspecialchars($post['email']); ?></p>
-                    </div>
-                </div>
 
-                <div class="p-confirm__item">
-                    <div class="p-confirm__heading">
-                        <label for="inputContent">お問い合わせ内容</label>
+                    <div class="p-confirm__item">
+                        <div class="p-confirm__heading">
+                            <label for="inputEmail">メールアドレス</label>
+                        </div>
+                        <div class="p-confirm__content">
+                            <p class="p-confirm__text"><?php echo htmlspecialchars($post['email']); ?></p>
+                        </div>
                     </div>
-                    <div class="p-confirm__content">
-                        <p class="p-confirm__text"><?php echo nl2br(htmlspecialchars($post['contact'])); ?></p>
-                    </div>
-                </div>
 
-                <div class="p-confirm__button">
-                    <div class="p-confirm__buttonContent">
-                        <a href="contact.php">戻る</a>
-                        <button type="submit">送信する</button>
+                    <div class="p-confirm__item">
+                        <div class="p-confirm__heading">
+                            <label for="inputContent">お問い合わせ内容</label>
+                        </div>
+                        <div class="p-confirm__content">
+                            <p class="p-confirm__text"><?php echo nl2br(htmlspecialchars($post['contact'])); ?></p>
+                        </div>
+                    </div>
+
+                    <div class="p-confirm__button">
+                        <div class="p-confirm__buttonContent">
+                            <a href="contact.php">戻る</a>
+                            <button type="submit">送信する</button>
+                        </div>
                     </div>
                 </div>
             </div>
