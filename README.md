@@ -14,7 +14,7 @@ https://takiwaka.sakura.ne.jp
 
 ・サーバーレンタル
 
-・PHPを利用した問い合わせフォームの作成
+・PHPを利用した問い合わせフォームの作成（入力内容のチェック、遷移前のページチェック等々）
 
 ・jqueryプラグインscrollify導入
 
