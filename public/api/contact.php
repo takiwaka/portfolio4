@@ -1,12 +1,12 @@
 <?php
+
 header("Content-Type: text/html; charset=UTF-8");
 session_start();
-include('version.php');
 $error = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
+        
         // フォームの送信時にエラーをチェック
         if ($post['name'] === '') {
                 $error['name'] = 'blank';
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($post['contact'] === '') {
                 $error['contact'] = 'blank';
         }
-
+        
         if (count($error) === 0) {
                 // エラーがないので確認画面に移動
                 $_SESSION['form'] = $post;
@@ -32,11 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 }
 ?>
+
+<?php include('version.php'); ?>
+
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-        <meta charset="UTF-8" />
+        
+        <head>
+                <meta charset="UTF-8" />
         <meta name="description" content="トップのdescription" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
