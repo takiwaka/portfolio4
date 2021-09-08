@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <form action="" method="POST" novalidate>
 
-                                        <p class="p-contact__heading">お問い合わせ</p>
+                                        <p class="p-contact__heading">お問い合わせ 河北のポートフォリオ4</p>
 
                                         <div class="p-contact__row">
                                                 <div class="p-contact__title">
